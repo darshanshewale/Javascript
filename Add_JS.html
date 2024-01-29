@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="external.js"></script>
+    <script>
+      function myfun() {
+        document.getElementById("demo").innerHTML = "Head JS ";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>How to add javascript in HTML Document</h1>
+
+    <h2>ADD javascript code inside the head section</h2>
+
+    <h3 id="demo" style="color: green">javascript head section</h3>
+    <button type="button" onclick="myfun()">click here</button>
+
+    <h1>ADD javascript Code inside Body section</h1>
+
+    <script>
+      function bod() {
+        document.getElementById("demo1").innerHTML = "Body js";
+      }
+    </script>
+
+    <h3 id="demo1" style="color: yellow">javascript in the body section</h3>
+    <button type="button" onclick="bod()">clieck here</button>
+
+    <h1>External Javascript</h1>
+
+    <h3 id="demo2" style="color: orange">javascript is the external section</h3>
+    <button type="button" onclick="exter()">click here</button>
+  </body>
+</html>
