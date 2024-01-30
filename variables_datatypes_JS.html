@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Variable and Datatypes in java script</h1>
+
+    <h1>variables</h1>
+    <pre>
+        In javascript,variables are used to store and manage data they created using var, let or const keyword;
+    </pre>
+    <h2>var</h2>
+    Declares a variable It has a function-scoped or globally-scoped behaviour
+
+    var x=10;
+
+    <script>
+        var a = "hello Coder";
+        var b = 10;
+        var c = 12;
+        var d = c + b;
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+    </script>
+
+    <h2>let</h2>
+    Introduces Block-scoped variables It commonly used for variables that may change their value
+    ley y="hello";
+
+    <script>
+        let x = "hello lerners";
+        let y = "joining"
+        let z = '12';
+        let m = y + z;
+
+        console.log(x);
+        console.log(y);
+        console.log(z);
+        console.log(m);
+    </script>
+
+    <h2>Const</h2>
+    Declares variables that cannot be reassigned It's block scoped as well
+
+    <script>
+        const h = "happy coding";
+        console.log(h);
+
+        const i = 200;
+        console.log(b);
+
+        const j = "12";
+        console.log(c);
+    </script>
+
+    <h1>Data types</h1>
+    <pre>
+        javascript is a dynamically typed(also called lossely typed ) scripting language. In javascript, variables can receive different 
+        data types over time. The latest ECMA scripts standard defines eight data types out of which seven data types are primitive(predefined)
+        and one complex or Non primitive
+
+    </pre>
+
+    <h1>Primitive Data Types </h1>
+    The predefined data types provided by javascript lanaguage are know as primitive data types also know as built in
+    data types
+    <pre>
+        @Number: javascript numbers are always stores in double precision 64-bit binary format IEEE 754 unlike other programming 
+        languages you do't need int,float etc to declare differnt numeric value
+        @string: javascript strings are similar to sentences they are made up of a list characters, which is essentially just an arry of characters
+        like "Hello Greekforgreeks" etc
+        @Boolean: Represent a logical entity and can have two values: true or false
+        @NULL: This type has only one value that is NULL
+        @Undefined: A variable that has not been assigned a value is Undefined
+        @Symbol: Symbol return unique identifiers that can be used to add unique property keys to an object that won't collide with keys of any other code 
+         that might add to the object 
+         @Bigint:BigInt is a Built-in-object in javascript that provides a way to represent whole numbers larger than 253-1
+
+    </pre>
+
+    <h1>Non primitive Data types</h1>
+    <pre>
+        The Data Types that are derived from primitive data types  of the java script language are known as no primitve data types .
+        it is also known as derived data types or refernce data types 
+        @Object It is the most important data type and forms the building blocks for modern javascript we will learn about these data types 
+        in details in further articles 
+        
+    </pre>
+
+    <h1>Global and Local variables in javascript</h1>
+    <h1>Global variable</h1>
+    <pre>
+        These are variables that are defined in global scope i.e outside of function These vaiables have a global scope so they can be accessed
+        by any function directly In the case of global scope variables the keyword they are declared with does not matter they all act the same
+        A variable declared without a keyword is also considered global even though it is declared in the function
+    </pre>
+    <h1>Local variables</h1>
+    <pre>
+        when you use javascript local variable are variables that are defined within functions they have local scope which means
+        that they can only be used within the function that define them accessing them outside the funtion will throw an error
+    </pre>
+
+    <script>
+        let petName = 'Rocky'
+        myFunction()
+
+        function myFunction() {
+            fruit = 'apple'; // Considered global
+            console.log(typeof petName +
+                '- ' +
+                'My pet name is ' +
+                petName)
+        }
+
+        console.log(
+            typeof petName +
+            '- ' +
+            'My pet name is ' +
+            petName +
+            'Fruit name is ' +
+            fruit)
+
+            anotherfunction()
+
+
+            function anotherfunction()
+         {
+            let petName='Tom';
+            console.log(petName);
+
+         }
+         console.log(petName)
+
+    </script>
+
+    Note : use local variable whenever possible Always use the var keyword to declare a new global variable and always declare a variable before
+    you refer to it in your code
+
+    
+
+
+
+</body>
+
+</html>

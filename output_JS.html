@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript Output</h1>
+    <pre>
+        Javascript Output defines the ways to display the output of a given code 
+    </pre>
+
+    <h2>using innerHTML</h2>
+    It is used to access an elemenmt It defines the HTML content 
+    document.getElementbyID("id").innerHTML
+
+    <p id="inner"></p>
+    <script>
+        document.getElementById("inner").innerHTML=10 * 2;
+    </script>
+
+    <h2>Document.write()</h2>
+    It is used for testing purpose
+
+    <script>
+        document.write(10 *2);
+    </script>
+
+
+<h2>Window alert</h2>
+It display the content using an alert box.
+<script>
+    window.alert(10 *2);
+</script>
+
+<h2>Using Console.log()</h2>
+It is used for debugging purposes.
+<script>
+    console.log(10*2);
+</script>
+
+<h2>Using Windows Prompt()</h2>
+It allows to take input from user
+
+
+<script>
+    window.prompt("please enter your input");
+</script>
+
+<h2>using appendchild()</h2>
+this method allos you to append content to an HTML element 
+
+ <!-- <script>
+    var outputcontainer=document.createElement("div");
+    var useInput=windows.prompt('Enter somet ');
+    var output=document.createlement("p");
+    output.appendchild(document.createtextNode('You entered:'+ userinput));
+    outputcontainer.appendchild(output);
+
+    document.body.appendchild(outputcontianer);
+ </script> -->
+
+</body>
+</html>
