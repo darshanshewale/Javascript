@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Javascript</h1>
+    <pre>ES2015 introduction the const keyword to define new variable .
+        variable declared using the javascript const keyword can not be reassigned.
+
+        variable specified using const can not be redeclared and have block-scope
+
+        properties:
+        @can not be reassigned 
+        @it has block scope
+        @it can be assigned to the variable on the declaration line
+        @it's primitive value
+        @The property of a const object can be changed but it can not be chnaged to refernce to the new object 
+        @The value inside the const array can be changed it can add new items to const arrays but it can not refence a new array
+        @re-declaration of a const variable different block scopes is allowed
+        @can not hoiseted 
+        @Created only read-only references to value. 
+
+
+        <script>
+            const x = 12;
+            x = 13;
+            x += 1;
+        </script>
+
+            <pre>It desribes the const variable which contains the block scope</pre>
+
+    <script>
+        const a = 12;
+        {
+            const a=23;
+            console.log(a);
+            {
+                const a=45;
+                console.log(a);
+            }
+            {
+                const a=45;
+                console.log(a);
+            }
+        }
+        console.log(a);
+    </script>
+
+    It describes the const variable and assigned it after declaration
+    <script>
+        const y;
+        y=22;
+        // this will give error as need to initialize at the time of declaration
+    </script>
+
+    <h4>It Describes the const variable can not be hoisted</h4>
+
+    <script>
+        z=3;
+        console.log(z);
+        const z;
+        // this will given error as const do not support for hoisting
+    </script>
+
+
+<h4>It describes that the array values can not be modified only reference to the array can not be changed </h4>
+
+<script>
+    const arr1=["pankaj" , "ganesh" ,"Nilesh"]
+    console.log(arr1);
+    arr1[2]="narayan";
+    console.log(arr1);
+</script>
+
+<h4>It describe that the object properties can be modified only reference to the object cannot be changed</h4>
+
+<script>
+    const person =  {
+        first_name:"Pankaj",
+        last_name:"singh",
+        age:22
+    };
+    console.log(person )
+
+    person.first_name='rahul';
+    person.last_name='rathod';
+    person.age=23;
+
+
+    console.log(person)
+
+</script>
+
+
+
+    </pre>
+</body>
+
+</html>

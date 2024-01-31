@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript var</h1>
+    <pre>javascript var statement is used to declare variable in javascript are funciton-scoped.The var statement is also used to declare global scope
+        variables.
+
+        before the introduction of ES6 all the keywords in javascript were declared with only the "var" keyword
+    </pre>
+
+    <h1>Function Scope</h1>
+    <pre>The variable declared inside a funcition are function scoped and can not be accessed outside the function the variables declard with
+        var  can only be accessed inside that function and its enclosing function
+    </pre>
+    <pre>
+        The variables declared using the var statement are hoisted at the top are initialized befor the execution of code with a defualt value of 
+        undefined the variables declared in the global scope that is global scope that is outside any function can not be deleted 
+    </pre>
+
+    <p>Declare global variable and access it anywhere insiden the program </p>
+
+    <script>
+        var test =12;
+        function foo()
+        {
+            console.log(test);
+        }
+        foo();
+    </script>
+
+    <p>We  will declared multiple variables in a single statement </p>
+
+    <script>
+        var test1=12,
+        test2=34,
+        test3=22
+        function myfun()
+        {
+            console.log(test1,test2, test3);
+        }
+        myfun();
+    </script>
+
+    <p>The hoisting of variables declared using var</p>
+
+    <script>
+        console.log(p);
+        var p=22;   
+
+        // output without error becuase the variable test is hoisted at the top even before the execution of the program began and the variable  is 
+        // initialized with a default value of undefined 
+    </script>
+
+    <p>In this example we will redeclare a variable in the same global block </p>
+
+    <script>
+        var a1=12;
+        var a1=14;
+        console.log(a1);
+
+        // we did not get any error when redeclaring the variable if we did the the same with the let keyword an error would be thrown
+    </script>
+
+    <p>
+        redeclare the variabvle in another scope and see how it is the original variable
+    </p>
+
+    <script>
+        var r=12;
+        function r1()
+        {
+            var r=123;
+            console.log(r);
+        }
+        r1();
+        console.log(r);
+
+        // did not get the any error while redeclaring the variable inside another function scope and the original value of 
+        // the variable preserved
+    </script>
+
+    <p>
+        will try to delete a global variable declared using va in the 'use strict ' mode
+    </p>
+     <script>
+        'use strict';
+        var t=33;
+        delete (t);
+        console.log(t);
+     </script>
+
+     whenever a variable is declared using var in global scope it can not be configured Hence it can not be deleted using the 
+     delete keyword and an error is thrown 
+
+
+</body>
+</html>
