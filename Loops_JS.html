@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loops in javascript</h1>
+
+    <pre>
+        Looping in programming languages is a feature that facilitate the execution of set of instruction/function repeatedly
+        while some condition evaluates to true 
+    </pre>
+
+    <h1>While Loop</h1>
+
+    <pre>
+        A while loop is control flow statement that allows code to be executed repeatedly based on a given boolean condition The while loop can
+        be though of as a repeating if statment 
+        
+        1)While loop starts with checking the condition. If it is evaluated to be true, then the loop body statements are executed
+        otherwise first statement following the loop is executed. For this reason, it is also called the Entry control loop
+        2)Once the condition is evaluated to be true, the statements in the loop body are executed. Normally the statements contain 
+        an updated value for the variable being processed for the next iteration.
+        3)When the condition becomes false, the loop terminates which marks the end of its life cycle.
+    </pre>
+
+    <script>
+        let i=0;
+        while(i<5)
+        {
+            document.write(i);
+            i++;
+        }
+    </script>
+
+    <h1>For loop</h1>
+
+    <pre>
+        for loop provides a concise way of writing the loop structure. Unlike while loop, a for statement consumes the initialization,
+        condition, and increment/decrement in one line thereby providing a shorter, easy-to-debug structure of looping. 
+
+        1)Initialization condition: Here, we initialize the variable in use. It marks the start of a for loop.
+        An already declared variable can be used or a variable can be declared, local to loop only.
+        2)Testing Condition: It is used for testing the exit condition for a loop. It must return a boolean value.
+        It is also an Entry Control Loop as the condition is checked prior to the execution of the loop statements.
+        3)Statement execution: Once the condition is evaluated to be true, the statements in the loop body are executed.
+        4)Increment/ Decrement: It is used for updating the variable for the next iteration.
+        5)Loop termination: When the condition becomes false, the loop terminates marking the end of its life cycle.
+    </pre>
+
+    <script>
+        for(let i=0;i<5;i++)
+        {
+            document.write(i);
+        }
+    </script>
+
+    <h1>Do..while</h1>
+    <pre>
+        The do-while loop is similar to the while loop with the only difference is that it checks for the condition after executing the statements,
+         and therefore is an example of an Exit Control Loop. 
+
+        1)The do-while loop starts with the execution of the statement(s). There is no checking of any condition for the first time.
+        2)After the execution of the statements and update of the variable value, the condition is checked for a true or false value.
+        If it is evaluated to be true, the next iteration of the loop starts.
+        3)When the condition becomes false, the loop terminates which marks the end of its life cycle.
+        4)It is important to note that the do-while loop will execute its statements at least once before any condition is checked 
+            and therefore is an example of the exit control loop.
+    </pre>
+
+    <script>
+        let j=0;
+        do
+        {
+            document.write(j);
+            j++;
+        }while(j<6);
+
+    </script>
+
+    <h1>Infinite Loop</h1>
+    <pre>
+        One of the most common mistakes while implementing any sort of looping is that it may not ever exit, 
+        i.e. the loop runs for infinite times. This happens when the condition fails for some reason. 
+    </pre>
+
+    <h1>For in </h1>
+    <pre>
+        for in loop in javascript is used to iterate over the properties of an object.The for-in loop iterates only over those keys of 
+        an object which have their enumerable property set to true 
+    </pre>
+
+    <script>
+        let myobj={x:1 ,y:2,z:3};
+        for (let key in myobj)
+        {
+            document.write(key ,myobj[key]);
+        }
+    </script>
+
+    <h1>For Of </h1>
+    <pre>
+        This loop is used to iterate the iterable objects for e.g. array, object, set and map. It directly iterate the value of the given
+        iterable object and has more concise syntax than for loop.
+    </pre>
+
+    <script>
+        let arr=[1,2,3,4]
+        for(let value of arr)
+        {
+            document.write(value); 
+        }
+    </script>
+
+    <h1>Javascript Map Loop</h1>
+    <pre>A map loop is method on arrays that created a new array  by executing a function on each element in the array </pre>
+
+    <script>
+        const a=[1,2,3];
+        const newArr=arr.map(val=>val *2);
+        console.log(newArr);
+    </script>
+
+    
+</body>
+</html>

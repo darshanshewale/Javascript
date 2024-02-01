@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Errors Throw and try to catch</h1>
+    <pre>
+    <b>Try</b>: The try statement lets you test a block of code to check for errors
+    <b>catch</b>: The catch statement lets you handle the error if any are present
+    <b>throw</b> : The throw statement lets you make your own errors
+    <b>Finally</b> : The Finally statement lets you execute code after try and catch
+
+
+    </pre>
+
+    <script>
+        try{
+            dadalert("welcome Fellow Geek");
+        }
+        catch(err)
+        {
+            console.log(err);
+        }
+
+    </script>
+
+    <pre>
+        javascript Throws block the throw statement 
+        When any error occurs javascript will stop and generate an error message The throw statement lets you create your own custom error.
+        Technically you can throw your custom exception(throw error). The exception   can be a javascript Number,string , Boolean or Object
+        By using throw together with try and catch you can easily control the program flow and generate custom error messages
+    </pre>
+
+    <script>
+        try{
+            throw new Error("this is an error")
+        }
+        catch(e)
+        {
+            console.log(e);
+        }
+    </script>
+
+    <pre>
+        <b>Finally block</b>
+        The finally statment runs uncoditionally after the execution of the try/catch block Its syntax is
+    </pre>
+    <script>
+        try{
+            console.log('try');
+        }
+        catch(e)
+        {
+            console.log('catch');
+        }
+        finally
+        {
+            console.log('finally'); 
+        }
+    </script>
+</body>
+</html> 

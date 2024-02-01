@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>performace in Javascript</h1>
+    <pre>
+        1)Use fast DOM traversal with docuemtn.getelementbyID()
+        2)Delay Javascript Loading : put script at the bottom of the page instead by the time our script starts loading there's at least some content
+        on the page making the page seem to have loaded faster , An alternative is to use defer in the script tag the defer attribute specifies that the 
+        script should be executed after the page has finished parsing but it only works for external script
+        <!-- <script type="text/javascript" src="external.js" defer></script> -->
+        3)use Switch Instead of lengthy if-then-else statements 
+        4)get rid of unnessary loops and calls made inside loops
+        5)minimize your code as much as you can : Bundling your application components into *.js files and passing them through a javascript
+        minification tool will make your code cleaner there are tons of code minification tools that are available free.
+        6)use the local this .. 
+    </pre>
+
+    <h1>Debugging in Javascript</h1>
+    <pre>
+        Using debugger keyword: The debugger keyword is used in the code to force stop the execution of the code at a breaking point and calls
+        the debugging function. The debugger function is executed if any debugging is needed at all else no action is performed 
+
+        Use of console.log() method there is another way in which the JS value can be displayed in the debugger window 
+
+        setting break point: The console.log( is good way to debug errors but setting breakpoint is a faster more efficient and better method
+        In this method Breakpoint are set in code which stops the excetution of code at that point so that the values of variables can be examined
+        at that time. Here are some advantages of using Breakpoint over the console.log() method
+        
+    </pre>
+
+    <p id="test"></p>
+
+    <script>
+        const x=20;
+        const y=5;
+        const z=x * y;
+        debugger;
+        document.getElementById("test").innerHTML=z;
+    </script>
+    
+     
+</body>
+</html>
