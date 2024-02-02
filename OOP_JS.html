@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Object Oriented Programming in Javascript</h1>
+
+    <h2>Object</h2>
+    <pre>
+        An object is unique entity that contains properties and methods for example " a car " is a real life Object which has some characteristics
+        like color,type,model and horsepower and performs certain actions like driving.The characteristics of an object are called properties in opp
+        and the action are called methods An object is an instance of a class 
+
+        Note: A method in javascript is a property of an object whose value is a function
+
+        The object can be created in two ways in javascript:
+        @Object Literal
+        @Object Constructor
+    </pre>
+
+    <h2>Object Literal</h2>
+    <script>
+      let person = {
+        first_name: "Mukul",
+        last_name: "latiyan",
+
+        getfunction: function () {
+          return `The name of the person is ${person.first_name} ${person.last_name}`;
+        },
+
+        phone_number: {
+          mobile: "1234",
+          landline: "4545",
+        },
+      };
+      console.log(person.getfunction());
+      console.log(person.phone_number.landline);
+    </script>
+
+    <h2>Object Constructor</h2>
+    <script>
+      function person1(first_name, last_name) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+      }
+
+      let person2 = new person1("Mukul", "latiyan");
+      let person3 = new person1("Rahul", "Avsthi");
+
+      console.log(person2.first_name);
+      console.log(`${person3.first_name} ${person3.last_name}`);
+    </script>
+    <h4>
+      Note: The javascript Object.create() method creates a new object,using an
+      existing object as the prototype of the newly created object
+    </h4>
+
+    <script>
+      const coder = {
+        study: false,
+        printInto: function () {
+          console.log(`My name is ${this.name}.Am I studying?:${coder.study}.`);
+        },
+      };
+
+      const me = Object.create(coder);
+
+      me.name = "Kohali";
+      me.study = true;
+      me.printInto();
+    </script>
+
+    <h1>Classes</h1>
+    <pre>
+        Classes are blueprints of object A class can have many Objects because the class is a template while objects are instances of the class
+        or the concrete implementation before we move further into implementation we should know unlike other object oriented languages there are 
+        no classes in javascript we have only object To be more precise javacript is a prototype-based object oriented language which means it doesn't 
+        have classes rather it defines behaviour using a constructor function and then reuses it using the prototype.
+    </pre>
+
+    <p>
+      use ES6 classes then we will look at the traditional way of defining an
+      object and simulate them as classes
+    </p>
+
+    <script>
+      class vehicle {
+        constructor(name, maker, engine) {
+          this.name = name;
+          this.maker = maker;
+          this.engine = engine;
+        }
+        getDetails() {
+          return `The name of the bike is ${this.name}.`;
+        }
+      }
+
+      let bike = new vehicle("splendor", "honda", "125cc");
+      let bike1 = new vehicle("pulsar", "bajaj", "150cc");
+
+      console.log(bike.name);
+      console.log(bike1.maker);
+      console.log(bike1.getDetails());
+    </script>
+
+    <b>Abstraction</b>
+    <pre>
+            Abstraction means displaying only essential information and hiding the details. Data abstraction refers to providing only 
+            essential information about the data to the outside world,hiding the background detials or implementation.
+        </pre
+    >
+
+    <b>Encapsulation</b>
+    <pre>
+            The process of wrapping properties and function within a single unit is known as Encapsulation
+        </pre
+    >
+
+    <script>
+      class my {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        add_address(add) {
+          this.add = add;
+        }
+        getDetails() {
+          console.log(`Name is ${this.name},address is:${this.add}`);
+        }
+      }
+
+      let a1 = new my("rahul", "23");
+      a1.add_address("pune");
+      a1.getDetails();
+    </script>
+
+    <pre>
+            Encapsulation refers to the hiding of data or data abstraction which means representing essential features hiding the background
+            detail Most of the OOP languages provide access modifiers to restrict the scope of a variable but there are no such access modifiers
+            in javascript there are certain ways by which we can restrict the scope of variables within the Class/Object
+        </pre
+    >
+
+    <script>
+      function p(fname, lname) {
+        this.first_name = fname;
+        this.last_name = lname;
+
+        let getDetails_noaccess = function () {
+          return `First name is : ${first_name} Last name is:${last_name}`;
+        };
+
+        this.access = function () {
+          return `First name is : ${fname}, Last name is: ${lname}`;
+        };
+      }
+
+      let p1 = new p("rakesh", "rajesh");
+      console.log(p1.first_name);
+      console.log(p1.getDetails_noaccess);
+      console.log(p1.access());
+    </script>
+
+    <h1>Inheritance</h1>
+    <pre>
+            It is a concept in which some properties and method of an object are being used by another object unlike most of the OOP
+            languages where classes inherit classes javascript objects inherit objects , features of one object can be reused by other 
+            objects
+        </pre
+    >
+
+    <script>
+      class d1 {
+        constructor(name) {
+          this.name = name;
+        }
+        toString() {
+          return `Name of person: ${this.name}`;
+        }
+      }
+      class student extends d1 {
+        constructor(name, id) {
+          super(name);
+          this.id = id;
+        }
+        toString() {
+          return `${super.toString()},
+		Student ID: ${this.id}`;
+        }
+      }
+      let student1 = new student("Mukul", 22);
+      console.log(student1.toString());
+    </script>
+
+    <pre>
+        Note:the person and student Objects have the same menthod(i.e tostring()),this is called Method Overiding .Mehtod Overiding allows 
+        a method in a child class to have the same name(polymorphism) and menthod signature as that of a parent class.
+    </pre>
+
+    <pre>
+        polymorphism: polymorphism is one of the core concept of object oriented programming languages Ploymorphism means the same function
+        with different signatures is called many times.Polymorphism can be achieved by method Overiding and method obverloading
+    </pre>
+  </body>
+</html>

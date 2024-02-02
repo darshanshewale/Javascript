@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Objects in Javascript</h1>
+    <pre>
+        Objcts in javascript are the most Important data type and form the building blocks for modern javascript 
+        
+        syntax:
+        new Object(value);
+        Object(value);
+        let object_name={
+            key_name:value,
+            ...
+        }
+        Note: Object() can be called with or without new Both Create a new Object.
+        
+        @Objects are more complex and each object may contain any combination of these primitive data-types as well as refrences data-types 
+        @An object is a refrence data type variables that are assigned a refrences value are given a reference or a pointer to that value 
+        That refrence or pointer to the location in memory where the objects is stored the variables don't actually store value
+        @loosly speaking objects in javascript may be dedinfed as an unordered collection of related data of primitive or reference types 
+        in the form of key:value pairs these keys can be variables or functions and are called properties and method respectively 
+        in context of an object.
+
+
+    </pre>
+
+    <h1>Javascript Object properties</h1>
+    <pre>
+        The property names are can  be string or numbers. In case the property names are numbers they muct be accessed
+         using the bracket notation" like the bracket notation" like
+         but more on the bracket notation later property names can also be strings with more than one space sepatated words 
+         In which case these property names must be enclosed in quotes 
+        </pre
+    >
+
+    <script>
+      const o = new Object();
+      o.foo = 42;
+
+      console.log(o);
+      // JavaScript code demonstrating a simple object
+      let school = {
+        name: "Vivekananda School",
+        location: "Delhi",
+        established: "1971",
+        20: 1000,
+        displayInfo: function () {
+          console.log(`${school.name} was established 
+			in ${school.established} at ${school.location}`);
+        },
+        display_info: function () {
+          console.log(`The value of the key 20 is ${school["20"]}`);
+        },
+        space: function () {
+          console.log(`${school.name.split(" ")[0]}`);
+        },
+      };
+      school.displayInfo();
+      school.display_info();
+      school.space();
+    </script>
+    <pre>
+        Inherited properties of an object are those properties that have been inherited from the objects proptotype as opposed to being 
+        defined for the object itself which is known as the object's own property to verify if a property is an objects's own property we can use the 
+        has own property method. property attributes Data properties in javascript have four attributes.
+
+        @value : The property's value
+        @writable :when true the property value can be changed
+        @enumerable: when true the property can  interated over by for-in enumerartion otherwise the property is said to be non enumerable
+        @configurable : if false attempts to delete the property change the property to be an access or property or change its attributes
+
+    </pre>
+
+    <script>
+      const object1 = new Object();
+      object1.property1 = 42;
+      console.log(object1.hasOwnProperty("property1"));
+    </script>
+
+    <h3>Accessing Object Members</h3>
+    <pre>
+            Object member(properties or methods )can be accessed using the dot notation 
+            (ObjectName.MemberName);
+        </pre
+    >
+    <h3>Bracket Notation</h3>
+
+    <script>
+      let address = {
+        city: "Pune",
+        pin: "423203",
+      };
+      console.log(address.city);
+      console.log(address["pin"]);
+    </script>
+
+    <h3>Iteration over all keys of an object</h3>
+    <pre>
+        To Iterate over all existing enumerable keys of an object we may use the for...in construct it is worth nothing that this allows
+        us to access only those properties of an object which are enumerable(recall that enumerable os on of the four attribute of data properties)
+        for instance properties inherited from the object prototype are not enumerable but enumerable properties inherited from somewhere can also 
+        be accessed using the for..in construct
+        </pre
+    >
+
+    <script>
+      let person = {
+        gender: "male",
+      };
+
+      let person1 = Object.create(person);
+      person1.name = "Adam";
+      person1.age = 45;
+      person1.nationality = "Australian";
+
+      for (let key in person1) {
+        console.log(key);
+      }
+    </script>
+
+    <h4>Deleting Properties</h4>
+    <pre>
+            To Delete a property of an object we can make use of the delete operator 
+            <b>we can not delete inherited properties or non -configrable propertiess </b>
+
+        </pre>
+
+    <script>
+      let obj1 = {
+        propfirst: "Name",
+      };
+      console.log(obj1.propfirst);
+
+      let obj2 = Object.create(obj1);
+      console.log(obj2.propfirst);
+      console.log(delete obj2.propfirst);
+      console.log(obj2.propfirst);
+
+      delete obj1.propfirst;
+      console.log(obj1.propfirst);
+    </script>
+  </body>
+</html>
