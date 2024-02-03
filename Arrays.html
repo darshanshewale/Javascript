@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Javascript Arrays</h1>
+    <pre>
+        Javascript Array is a single variable that  is used to store elements of different data types.javascript arrays are zero-indexed 
+        javascript arrays are not associative in nature
+    </pre>
+    <h1>Declaration of an array</h1>
+
+    <h4>Creating an array using array literal</h4>
+
+    <script>
+      let courses = ["HTML", "CSS", "Javascript", "React"];
+      console.log(courses);
+    </script>
+
+    <h4>Creating an array using the javasript new keyword</h4>
+
+    <script>
+      let arr1 = new Array(3);
+      arr1[0] = 10;
+      arr1[1] = 20;
+      arr1[2] = 30;
+
+      console.log("Array 1:", arr1);
+
+      let arr2 = new Array(10, 20, 30, 40, 50);
+      console.log("Array 2:", arr2);
+
+      let arr3 = new Array(5);
+      console.log("Array 3:", arr3);
+
+      let arr4 = new Array("1BHK");
+      console.log("Array 4:", arr4);
+    </script>
+
+    <h4>
+      Accessing Elements of array , Chnaginng element from a predefined array
+    </h4>
+
+    <script>
+      const cou = ["HTML", "CSS", "JS"];
+      console.log(cou[0]);
+      console.log(cou[1]);
+      console.log(cou[2]);
+
+      console.log(cou);
+      cou[1] = "React";
+      console.log(cou);
+    </script>
+
+    <h4>
+      Converting an Array to string we have built method tostring() in
+      javascript that converts an array to a string
+    </h4>
+
+    <script>
+      const sub = ["Che", "Phy", "Math"];
+      console.log(sub.toString());
+    </script>
+
+    <h4>
+      increases and decreases the length of an array Loop through javascript
+      array element
+    </h4>
+    <script>
+      const player = ["Sachin", "Shewagh", "gambhir"];
+      player.length = 5;
+      console.log("Array after increased length", player);
+      player.length = 2;
+      console.log("Array after decreased lenght", player);
+
+      for (let i = 0; i < player.length; i++) {
+        console.log(player[i]);
+      }
+
+      player.forEach(my);
+      function my(elements) {
+        console.log(elements);
+      }
+    </script>
+
+    <h4>Adding new elements to javacript Array using push and length</h4>
+
+    <script>
+      const movie = ["sultan", "Dangal", "kushti"];
+      console.log("Original Array", movie);
+      movie.push("chake de india");
+      movie[movie.length] = "83";
+      console.log("Array after adding an element:", movie);
+
+      console.log(typeof movie);
+    </script>
+
+    <h2>Difference between javascript arrays and objects</h2>
+    <pre>
+        @javasript arrays use indexes as numbers // used when we want element to be numeric
+        @objects use indexes as names // when we want element names to be strings
+
+    </pre>
+
+    <h1>Javascript new Array</h1>
+    <pre>
+        @javascript has a built-in array constructor new array()
+        @[] can also be used
+    </pre>
+
+    <h1>Recognizing a javascript Array</h1>
+    <pre>
+        there are two methods by which we can Recognize a javascript array
+        @By Using Array.isArray() method
+        @By using instanceof method
+    </pre>
+
+    <script>
+      const arr = ["let", "var", "const"];
+      console.log("using array.isarray() method", Array.isArray(arr));
+      console.log("using instance of method", arr instanceof Array);
+    </script>
+
+    <h1>javascript basic Methods</h1>
+    <pre>
+        @length: returns the length of the given Array
+        @arraytostring : convert the given value into the string
+        @array.join:helps to join arrays as a string , joins the array by using thagt parameters
+        @delete: delete operator used to delete the given value that can be object,array or anything
+        @concat: is used to concatinate the two arrays and it gives the mergerd array.
+        @array flat : used to flattend the array that means it merge all the given array and reduce all the nesting present it
+        @push:adding element at the end of the array arrays  in javscript are mutable objects
+        @Array unshift: used to add elements to the front of an array 
+        @array pop:This method is used to remove elements from the end of an array
+        @array shift : this method is used to remove element form the begining of an array
+        @array splice : used for Insertion and removal of elements in between an array Array.splice(start,deletecount,item1,item2)
+        @Array.slice : This method returns a new array containing a portion of the original array based on the start and end index provided as argument
+    
+    </pre>
+
+    <script>
+      let test = ["test1", "test2", "test3"];
+      console.log(test.length);
+      let str = test.toString();
+      console.log(str);
+      console.log(test.join("|"));
+      console.log(delete test.test3);
+
+      let t = ["t1", "t2"];
+      console.log(test.concat(t));
+
+      const numbers = ["1", "2", ["3", "4"]];
+      const flatnumber = numbers.flat(Infinity);
+      console.log(flatnumber);
+      numbers.push("334");
+      console.log(numbers);
+      numbers.unshift("0");
+      console.log(numbers);
+      numbers.pop();
+      console.log(numbers);
+      numbers.shift();
+      console.log(numbers);
+      console.log(numbers.slice(1, 3));
+      numbers.splice(1, 3);
+      console.log(numbers);
+    </script>
+
+    <h1>Javascript Methods</h1>
+
+    <h4>1)Array Some Method</h4>
+    <pre>
+            This method checks whether at least one of the elements if the array satisfies the condition checked by the argument function
+        </pre
+    >
+
+    <script>
+      function isgreater(element, index, array) {
+        return element > 5;
+      }
+      function func() {
+        let array = [2, 5, 8, 1, 4];
+        let value = array.some(isgreater);
+        console.log(value);
+      }
+      func();
+    </script>
+
+    <h4>Array reduce() Method</h4>
+    <pre>
+            The array reduce method in javascript is used to reduce the array  to a single value and executes a provided function for each value
+            of the array and then return value of function is stored in an accumulator.
+        </pre
+    >
+
+    <script>
+      let num = [334, 44, 45, 43];
+      let s = num.reduce(g);
+
+      function g(total, num) {
+        return total - num;
+      }
+      console.log(s);
+    </script>
+
+    <h4>Array.map method</h4>
+    <pre>
+            The map() method in javascript creates an array by calling a specific function on each element present in the parent 
+            array it is a non mututing method generally the map() method is used to iterate over an array and call the function 
+            on every elements of an array 
+        </pre
+    >
+    <script>
+      let no = [4, 9, 16, 25];
+
+      let m = no.map(g);
+
+      function g() {
+        return no.map(Math.sqrt);
+      }
+      console.log(m);
+    </script>
+
+    <h4>Array every method</h4>
+    <pre>
+            this method checks whether all the elements of the array satisfy the given condition or not that is provided by a function 
+            passed to it as the argument
+        </pre
+    >
+
+    <script>
+      function ispositive(element, index, array) {
+        return element > 0;
+      }
+      function f() {
+        let arr = [12, 4, 3, 5, 32];
+        let value = arr.every(ispositive);
+        console.log(value);
+      }
+      f();
+    </script>
+
+    <h4>Array flatmap method</h4>
+    <pre>
+            This method is used to flatten the input array element into a new array.This method first of all map every element with the help
+            of a mapping function then flattens the input array elements into a new array 
+        </pre
+    >
+
+    <script>
+      const myarray = [[1], [2], [3], [4]];
+
+      let v = myarray.flatMap((arr) => arr * 10);
+
+      console.log(v);
+    </script>
+    <h4>Array filter method</h4>
+    <pre>
+            this method is used to crete a new array from a given array consisting of only those elements from the  given array which 
+            satisfy a condition set by the arguments function
+        </pre
+    >
+
+    <script>
+      function isposi(value) {
+        return value > 0;
+      }
+
+      function u() {
+        let filtered = [3, -3, -44, 34, 44, 33].filter(isposi);
+        console.log(filtered);
+      }
+      u();
+    </script>
+
+    <h4>Array Find</h4>
+    <pre>
+            Used to get the value of the first element in the array that satisfies the provided condition 
+        </pre
+    >
+
+    <script>
+      let array = [10, 20, 30, 40];
+
+      let found = array.find(function (element) {
+        return element > 20;
+      });
+      console.log(found);
+    </script>
+
+    <h4>Array Fill method</h4>
+    <pre>
+            This method is used to fill the array with a given static value.The value can be used to fill the entire array or it can be used to fill 
+            a part of array 
+        </pre
+    >
+
+    <script>
+      let r = [1, 3, 4, 5];
+
+      r.fill(44, 34, 4);
+      console.log(r);
+    </script>
+
+    <h4>Array foreach method</h4>
+    <pre>
+            provided function once for each element of the array.
+        </pre
+    >
+
+    <script>
+      const items = [1, 29, 47];
+      const copy = [];
+
+      items.forEach(function (item) {
+        copy.push(item * item);
+      });
+
+      console.log(copy);
+    </script>
+
+    <h4>Array sort method</h4>
+    <pre>
+            This method sort the array
+        </pre
+    >
+
+    <script>
+      let noo = [3, 4, 5, 43, 4];
+
+      let ss = noo.sort(g);
+
+      function g(a, b) {
+        return a - b;
+      }
+      console.log(ss);
+    </script>
+
+    <h4>Array includes</h4>
+    <pre>checks whether element present or not </pre>
+    <script>
+      let l = [34, 5, 3, 3, 4];
+
+      let a = l.includes(5);
+      console.log(a);
+    </script>
+  </body>
+</html>

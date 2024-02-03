@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Function in Javascript</h1>
+    <pre>
+        javascript Function is a set of statement that take input do some specific computation and produce output
+    </pre>
+    <p>A javscript function is executed when "something" invokes it(calles it)</p>
+
+    <script>
+        function multiply() {
+            let num1 = 10;
+            let num2 = 20;
+
+            let mul = num1 * num2;
+            document.write(mul);
+        }
+        multiply();
+
+    </script>
+
+    <h1> Function Invocation</h1>
+    <pre>
+        @triggered by an event(e.g a button clieck by user )
+        @when explicitly called from javascript code 
+        @Automatically executed,such as self-invoking functions
+    </pre>
+
+    <h4>There are three ways of writing a function in javascript</h4>
+
+    <h5>Function Declaration</h5>
+    <pre>
+        It declares a function with function keyowrd The function declaration must have a function name</pre>
+
+    <script>
+        function HW() {
+            document.write("hello World");
+        }
+        HW();
+    </script>
+
+    <h5>Function Expression</h5>
+
+    <pre>
+        It is similar to function declaration without the function name fucntion expression cab be stored in a variable assigment 
+    </pre>
+
+    <script>
+        let fun = function (num1, num2) {
+            let ans = num1 * num2;
+
+            return ans;
+        }
+        let a = fun(3, 4);
+        document.write(a);
+    </script>
+
+    <h5>Arrow Function</h5>
+    <pre>
+            It is one of the most used and efficient methods to create a function in javascript becuase of its compartively easy implementation
+            it is a simplified as well as more compact version of a regular or normal function expression or syntax
+          </pre>
+
+    <script>
+
+        let division = (n1, n2) => { return n1 / n2 };
+        let d = division(10, 5);
+        console.log(d);
+
+    </script>
+
+    <h1>types of function in javascript</h1>
+
+    <h3>Named Function</h3>
+    <pre>
+            Named function:A named function is one that we write in code and then use whenever we need it by refrencing its name and providing
+            it with some parameters.named Functions come in handy when we need to call a fucntion servral times to give  various to it or run it multiple times
+            
+        </pre>
+
+    <h3>Anonymous function</h3>
+    <pre>
+            We can define a function in javacript withour giving it a name This nameless ufnction is refreed to as the Anonymous
+            fucntion A variable must be assigned to an Anonymous fucntion
+        </pre>
+
+    <h3>Nested function</h3>
+    <pre>
+            A function in javascript can contain one or more inner function These nested fucntions fall within the purview of the outer function
+            The inner fucntion has access to the variable and arguments of outer function However variables declared within inner fucntions
+            cannot be accessed by outer functions
+
+            <script>
+                function msg(name) {
+                    function hey() {
+                        console.log("hey" + name);
+                    }
+
+                    return hey();
+
+                }
+                msg("ravi");
+            </script>
+        </pre>
+
+    <h3>Immediately invoked function expression</h3>
+
+    <pre>
+            The browser executes the invoked fucntion  experession as soon as it detects it this function has the advantage of runnning instantly 
+            where it is situated in the code and producing direct output.That is it is unaffected by code that occurs later in the script and can be 
+            beneficial.
+    </pre>
+
+    <script>
+        let m = (function () {
+            return "welcome fo gfg";
+        })();
+        console.log(m);
+
+    </script>
+
+
+    <h1>Javascript Function Call</h1>
+    <pre>
+    The javascript Function call is a predefinced javascript method that is used to write method for different objects It calls The method 
+    taking the owner objects as an argument.The keyword this refers to the "owner" of the function or the object it belongs to all the function
+    in javscript are considered object mehtods so we can bind a function to a particular object by using call() A function will be the global object 
+    if the function is not considered a method of a javascript objects
+
+    return value: it calls and returns a method with the owner object being the argument 
+</pre>
+
+    <script>
+        function product(a, b) {
+            return a * b;
+        }
+
+        let result = product.call(this, 20, 4);
+        console.log(result);
+    </script>
+
+    <!-- this function calls with arguments  -->
+    <script>
+
+        let employee = {
+            details: function (designation, experience) {
+                return this.name
+                    + " "
+                    + this.id
+                    + designation
+                    + experience;
+            }
+        }
+        let emp1 = {
+            name: "A",
+            id: "123",
+        }
+        let emp2 = {
+            name: "B",
+            id: "456",
+        }
+
+        let x = employee.details.call(emp2, "manager", "4 years");
+        console.log(x);
+    </script>
+
+    <!-- Thie example decribes binding a function to an object  -->
+    <script>
+        let obj =
+        {
+            a: 12,
+            b: 13,
+        };
+
+        function sum() {
+            return this.a + this.b;
+        }
+        console.log(sum.call(obj));
+    </script>
+
+    <h1>Difference between method and Functions in javascript</h1>
+
+    <pre>
+        <b>Javscript Function</b> is a block of code written to perform some spcicific set of task we can define a function using 
+        the function keyword followed by Name and optional parameters they body of the function is enclosed in curly braces
+
+        <b>javscript Method</b> is a property of an object that contains a function definition method are functions stores as object properties
+        object method can be accessed with the following syntax
+    </pre>
+
+    <script>
+        let data={
+            empname:"rahul",
+            details:function()
+            {
+                return this.empname;
+            }
+        };
+        console.log(data.details());
+    </script>
+
+
+</body>
+
+</html>
