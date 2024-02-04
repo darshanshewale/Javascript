@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript Numbers</h1>
+    <pre>
+        javascript Numbers are primitve data types javascript numbers are always stores in double precision 64 bit binary format IEEE754
+        This  format stores numbers in 64 bits
+        @0-51 bit stores value(fraction)
+        @52-62 n=bit stores exponent
+        @63-bit stores sing
+
+        <b>Number Literals</b>:The types of number literals you can use decimal,binary,octal and hexadecimal
+
+        <b>Number Coercian</b>The built-in-operation of javascript that expect numbers coerce their arguments to numbers list 
+        @undefined is returned as NAN
+        @null is returned as 0
+        @true as 1 and false as 0
+        @string are returned by parsing them as if they contain an object literal if the string is not parse it returns NaN
+        @BignInts and sympbol throw typeerror
+
+        <b>Interger Conversion</b>some operation such as those which work with an array,string, indexes or date/time expect integers 
+        After performing the coercion if the number is greater than 0 it is returned as the same and if the number NAN or -0 it is returned 
+        as 0 The result is always an integer.
+
+        <b>Fixed width integer</b>In javascript there are some functions that deal with the binary encoding of integers such as bitwise 
+        operators and typedArray objects.The bitwise operators always convert the operands to 32-bit intergers     
+
+        <h4>Creates a Number Object</h4>
+         <script>
+            let n=new Number(4);
+            console.log(n);
+         </script>
+    </pre>
+</body>
+</html>

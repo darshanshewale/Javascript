@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Javascript String</h1>
+    <pre>
+        Javascript String object is a sequence of characters It contains zero or more characters within single or double quotes
+
+        @create a string by using the native way and using string constructor
+        @can writ a string in both single and double quotes
+        @we can also use singl quotes and vice versa
+        @lenght of string
+
+        
+    </pre>
+
+    <script>
+        const str1 = "first string content";
+        console.log("string1:" + str1);
+
+        const str2 = String("second string content");
+        console.log("string 2:" + str2);
+
+        const str3 = "string string";
+        const str4 = 'string string';
+
+        console.log(str3);
+        console.log(str4);
+
+        const str = "GeeksforGeeks";
+
+        console.log("String Length: " + str.length);
+
+
+    </script>
+
+    <h1>Escape characters</h1>
+    <pre>
+        We can use escape characters in string to add single quotes dual quotes and backslash.
+    </pre>
+
+    <script>
+        const s1="\'hello\' coders";
+        const s2="\\hello\\ coders";
+
+        console.log(s1);
+        console.log(s2);
+
+    </script>
+
+    <h1>breaking long string</h1>
+    <pre>Usa a backslash to break a long string in multiple lines of code</pre>
+
+    <script>
+        const song="'Rangi sari gulabi chunariya ree' is \ rangi sariiii";
+        console.log(song);
+    </script>
+
+    <h1>Passing Javascript string as objects</h1>
+    <pre>javascript string using the new keyword</pre>
+
+    <script>
+        const t=new String("hmmmmm");
+        console.log(t);
+    </script>
+
+    <h1>Javascript String methods</h1>
+    <pre>
+        @Slice(startindex,endindex)method:method extract a part of the string based on the given stating index and ending index 
+                                        and return a new String
+        @substring(startindex,endindex):returns the part of the given string from the start index to the end index.Indexing starts form
+                                        zero
+        @sunstr(start,length):returns the specified number of characters from the specified index from the given string
+
+        @Replace(replace value ,replace with):replaces a part of the guven string with another string or a regular expression 
+                                                The original string will reamains unchanged
+        @javascript replaceAll(regexp|substr,newsubstr|function):returns a new string after replacing all the matches of a string with a specified
+                                            string or regular expression 
+        @toupper:convert all the characters present in the string to uppper case 
+        @tolower: convert all the characters present in the so lowercase
+        @concat:combines the text of two string and returns new combined or joined string
+        @trim method:used to remove either white spaces from the given string
+        @trim start:removes whitespace from the begining of a String
+        @trim end:removes white space from the end of a string 
+        
+        <script>
+            let A='hellocoders';
+            let b=A.slice(0,3);
+            console.log(b);
+            let c=A.substring(4,7);
+            let d=A.substr(3,5);
+            console.log(c);
+            console.log(d);
+
+            let newstr=A.replace("hello","happy");
+            console.log(newstr);
+
+            let strr="mind power , power , soul    ";
+            let part=strr.replaceAll("power","space");
+            console.log(part);
+            let st='happycoding';
+            console.log(st.toUpperCase(st));
+            console.log(st.toLowerCase(st));
+            console.log(A.concat(b));
+            let newstrr=strr.trim();
+            console.log(newstrr);
+            console.log(strr.length);
+            console.log(newstrr.length);
+
+        </script>
+
+
+    </pre>
+
+</body>
+
+</html>
