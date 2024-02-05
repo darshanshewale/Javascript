@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Map</h1>
+    <pre>
+        javascript Map is a collection of elements where each elements is stored as a key,value pair  Map objects can hold both objects and 
+        primitive values as either key or value when we iterate over the map object returns the key and value pair in the same order as inserted
+        map() constructor is used to create map in javascript 
+
+        javascript Map has a property that represents the size of the map 
+    </pre>
+    <h1>New Map</h1>
+    <pre>
+        use Map() constructor to create map object 
+    </pre>
+
+    <script>
+        const prices = new Map ([
+            ["Laptop",1000],["Smartphone",800],["Smartphone",800],["Tablet",400]
+        ]);
+        console.log(prices);
+    </script>
+
+    <h1>Map set()</h1>
+    <pre>
+        use Map.set() to create map object 
+    </pre>
+
+    <script>
+        let map1=new Map();
+        map1.set("firstname","shobhit");
+        map1.set("Lastname","sharma");
+        map1.set("website","google");
+
+        console.log(map1);
+
+        console.log("map has website ?"+map1.has("website"));
+        console.log(map1.get("firstname"));
+        console.log(map1.delete("website"));
+
+    </script>
+
+    <h1>Advantages of Map</h1>
+    <pre>
+        Map object provided by ES6 A key of Map may occur once which will be unique in the map's collection 
+        there are slight advantages to using a map rather than an object 
+
+        <b>Accidental Keys & Security </b> : No defualt keys are stored only contain what's explcitly put into them because 
+            of that it's safe to use
+        
+        <b>key Types & order</b>:It can be any value as a key function object anything and the order is straight forward way in the order
+                                of entry insertions
+
+        <b>Size </b>:becuase of the size property a map can be easily retrived
+
+        <b>performace</b>:Any operation can be performed on math so easily in better way
+
+        <b>Serialization and parsing</b>We can create our own serialization and parsing support for map by using JSON.stringfy() and JSON.stringify() and JSON.parse() method
+
+    </pre>
+
+</body>
+</html>

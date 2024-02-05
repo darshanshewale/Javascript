@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Sets</h1>
+    <pre>We will be discussing  the set object provided by ES6. A set is a collection of items that are unique  , set in ES6 are ordered
+        elements of the set can be iterated in the insertion order The set can store any type of value whethjer primitive or objects </pre>
+
+    <b>parameter</b>
+    it is is an iiterable onject whose all element are added to the new set created if the parameter is not specified or
+    null is passed then
+    a new set created is empty
+
+    return value : new set of object
+
+
+    <script>
+        let set1 = new Set(["rahul", "rakesh", "amit ", "vijay"]);
+
+        console.log(set1);
+
+        let set2 = new Set("fun");
+        console.log(set2);
+    </script>
+    <pre>
+    <h1>Properties</h1>
+    Set Size:it retunrs the numbers of elements in the set
+    </pre>
+
+    <h1>Method of set</h1>
+    <pre>
+        <b>Set.add()</b>
+        It adds the new element with a specified value at the end of the set object 
+
+        parameter:
+        val: it is a value to be added to the set
+    </pre>
+
+    <script>
+        let set3=new Set();
+
+        set3.add(10);
+        set3.add(20);
+
+        set3.add(30).add(40).add(50);
+        console.log(set3);
+    </script>
+
+    <pre>
+        <b>Set delete</b>: it deletes an element with the specified value from the set object
+
+        parameter
+        val: it is a value to be deleted from the set 
+    </pre>
+    <script>
+        console.log(set3.delete(10));
+        console.log(set3);
+    </script>
+    <pre>
+        <b>Set clear</b>
+        it removes all the element fromt the set 
+
+    </pre>
+
+    <script>
+        console.log(set2);
+        set2.clear();
+        console.log(set2);
+    </script>
+
+    <pre>
+        <b>Set.entries ()</b>
+        It returns an iterator object which contains an array having the entries of the set in the insertion order
+    </pre>
+    
+    
+    <pre>
+        <b>Set has </b>
+        It returns true if the specified value is present in the set object 
+    </pre>
+    <script>
+        console.log(set3.has(23));
+    </script>
+
+    <pre>
+        <b>Set values & set keys </b>
+        it rerturns all the values from the set in the same insertion order 
+        it also returns all the values from the set in the insertion order
+    </pre>
+
+    <script>
+        let set4=new Set();
+
+        set4.add(23);
+        set4.add(34);
+        set4.add(44);
+
+        let getentry=set4.entries();
+        console.log(getentry.next().value);
+        console.log(getentry.next().value);
+        console.log(getentry.next().value);
+
+        console.log(set4.values());
+        console.log(set4.keys());
+
+
+    </script>
+
+    <h1>Set operations </h1>
+    <pre>
+        Javascript Subset() method : it returns true if set a is a subset of b 
+        Union() ,instersection,differnece
+    </pre>
+
+    <h1>Iterate Over set elelements in javascript </h1>
+    <pre>
+        Set() objects are group of distinct values. A set is a collection of unique elements i.e no elements can appear more 
+        than once in a set Because sets in ES6 are ordered the items of a set can be iterated in the order od insertion object 
+        and primitive values can both be stored in set
+    </pre>
+    <h1>using for ...of loop</h1>
+    <h1>Using for each loop</h1>
+    <h1>using Array form and for loop: convert array then iterate</h1>
+    <h1>Loadash_foreach() method </h1>
+    
+
+    <script>
+        const myset=new Set();
+        myset.add("Rohit");
+        myset.add("Virat");
+        myset.add("Rahul");
+
+        for (const value of myset)
+        {
+            console.log(value);
+        }
+        myset.forEach(function(value)
+        {
+            console.log(value);
+        });
+
+        const myarray=Array.from(myset);
+        for(let i=0;i<myarray.length;i++)
+        {
+            console.log(myarray[i]);
+        }
+
+        // _.forEach(myset, function (value)
+        // {
+        //     console.log(value);
+        // });
+
+
+
+    </script>
+    
+
+
+
+
+</body>
+
+</html>
