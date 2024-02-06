@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>javascript Promise</h1>
+    <pre>
+        javascript promise are Easy to manage when dealing with multiple asynchronous operation where callbacks can create hell leading to unmanageable
+        code. prior to promise events and callback function were used but they had limited functionality and created unmanageable code. Mutiple 
+        callback functions would create callback hell that leads to unmanageable code. promises are used to handle asynchronous operation in javascript
+
+        let promise=new promise(function(resolve,reject)
+        {
+            //do something
+        });
+
+        parameters:
+        1)The promise constructor takes only one argument which is a callback function
+        2)the callback function takes two argument,resolve and reject
+        @perform operation inside the callback,function and if everything went well then call resolve.
+        @if desire operations do not go well then call reject  
+
+        A promise has four states:
+
+        1)Fulfilled:Action realted to the promise succeeded
+        2)rejected:Action related to the promise succeeded
+        3)pending:Promise is still pending i.e not fultilled or rejected yet
+        4)settled:promise has been fulfilled or rejected 
+
+        <b>Promise Consumers</b>:Promise can be consumed by registering functions using.then and .catch method 
+
+        <b>1)promise then()method</b>: It is invoked when a promise is either resolved or rejcted.it may also be defined as a carrier 
+        that takes data from promise and further executes it successfully
+
+        <b>Parameters</b>:It takes two function as parameters.
+        @The first function is executed  if the promise is resolved and a result is received.
+        @The second function is executed if the promise is rejected and an error is received.It is optional and there is better way to handle
+        error using .catch() method 
+
+        <b>2)promise catch()method </b>It invoked when a promise is either rejected or some error has occurred in execution It is used as an 
+        error handler whenever at any step there is a chance of getting an error
+
+        <b>Parameters</b>it takes one function as parameter
+        @function to handle errors or promise rejections catch()method internally calls then (null,errorhandler)i.e .catch is just shorthand for .then(errorhandler)
+
+    </pre>
+
+    <script>
+      let p = new Promise(function (resolve, reject) {
+        const x = "HelloCoders";
+        const y = "HelloCoders";
+
+        if (x === y) {
+          resolve();
+        } else {
+          reject();
+        }
+      });
+      p.then(function () {
+        console.log("Promise passed");
+      }).catch(function () {
+        console.log("Some error");
+      });
+    </script>
+  </body>
+</html>

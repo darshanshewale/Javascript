@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript proxy</h1>
+    <pre>
+        Javascript proxy is an object which intercepts another object and resists the fundamental operations on it.
+        This object is mostly used when we want to hide information abut one object from unauthorized access.
+
+        A  proxy consists of two parts which are its target and handler. A target is a javascript object on which the 
+        proxy is applied and the handler object contains the function to intercept any other operaration on it 
+
+        <b>parameters</b>
+        <b>tar</b> it is the object on which the proxy is to be applied
+        <b>handle</b> it is the object in which the intercept condition is defined 
+
+    </pre>
+    <!-- #method applied  aproxy object with an empty handler -->
+    <script>
+        let details={
+            name:"Raj",
+            course:"DSA",
+        }
+        const prox = new Proxy(details,{})
+
+        console.log(prox.name);
+        console.log(prox.course);
+    </script>
+    <!-- Method applies a handler function to intercept calls on the target object  -->
+    <script>
+        let det=
+        {
+            name:"Raj",
+            course:"DSA",
+        }
+        const p=new Proxy(det,{get:function(){
+            return "unauthorized";
+        }
+    })
+
+    console.log(p.name);
+    console.log(p.course);
+    </script>
+
+    <!-- method traps calls on the target object based on the condition  -->
+
+    <script>
+
+        let info={
+            name:'Rahul',
+            course:'HTML',
+        }
+        const proxyy=new Proxy(info,{get:function(tar,prop)
+        {
+            if(prop=="course")
+            {
+                return undefined;
+            }
+            return tar[prop];
+        }
+    });
+
+    console.log(proxyy.name);
+    console.log(proxyy.course);
+
+    </script>
+
+
+</body>
+</html>
