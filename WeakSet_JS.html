@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Javascript Weakset</h1>
+    <pre>
+        javascript WeakSet is used to store a collection of objects. It adapts the same properties of that of a set i.e does not
+        store duplicates.The major difference of a weakset with a set is that a weakset is a collection of  objects and not values of 
+        some particular type
+
+        <b>Parameter</b>paramter oobject is an iterable object All the elements of the iterable object are added to the weakset.
+
+        return type: it returns a weakset object
+    </pre>
+    <script>
+        function gfg() {
+            let weakSetObject = new WeakSet();
+            let objectOne = {};
+
+            weakSetObject.add(objectOne);
+            console.log("objectOne added");
+
+            console.log("WeakSet has objectOne : " +
+                weakSetObject.has(objectOne));
+        }
+        gfg();
+
+    </script>
+</body>
+
+</html>

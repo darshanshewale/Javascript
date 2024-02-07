@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript weakmap</h1>
+    <pre>
+        javascript weakmap is used to store a collection of key-value pairs that are weekly referenced which means if garbages collection
+        is possible it would not be prevented. In a weakmap the key are strictly objects but values can be any primitive Javascript Data type 
+        A weakMap is not enumerable as the reference are loose. Weakmaps are mainly used to store extra data where cleaning of memory 
+        does not affect the program much 
+
+        <b>parameter</b>
+        <b>iter</b> It is an iterable javascript object that implements the @@iterator Method. It contains two elements where the first is
+        key and the second is value
+    </pre>
+
+    <script>
+        function myfun()
+        {
+            let loosemap=new WeakMap();
+            let ram={name};
+            let rahul={name};
+            let raj={name};
+            loosemap.set(ram,"Ram");
+            loosemap.set(raj,"Raj");
+            loosemap.set(rahul,"Rahul");
+            console.log(loosemap);
+            console.log(loosemap.has(ram));
+        }
+        myfun();
+    </script>
+
+    <script>
+        let looseMap = new WeakMap();
+        let Ram = {name};
+        looseMap.set(Ram, "Ram");
+        console.log(looseMap);
+        Ram = null;
+        console.log(looseMap)
+        setTimeout(function(){
+	    console.log(looseMap);
+}, 300)
+
+    </script>
+</body>
+</html>
