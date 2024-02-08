@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>javascript Operator</h1>
+    <pre>javascript operator operate the operands thse are symbols that are used to manipulate a certain value or 
+        operand operator are used to performing specific mathmatical and logical computation on operands 
+
+        In javascript operators are used to compare values perform arithmetic operations etc
+    </pre>
+
+    <h1>javascript Operator</h1>
+
+    <h4>Arithmatic Operator : Addition, substraction , multiplication , Division , Modulus Exponentiation , Increment ,
+        Decrement , Unary + , Negation -</h4>
+
+    <script>
+        let a = 10 ** 2;
+        document.write(a);
+
+        a1 = -a;
+        document.write(a1);
+
+        a1 = +a;
+        document.write(a1);
+
+        let b = 99 % 10;
+        document.write(b);      
+    </script>
+
+    <h4>Assignment Operator: Assignment, Addition Assignment,Substraction Assignemnt , multiplication Assignement,
+        Division Assignement
+        Modulus Assignement , Exponentiation Assignement , Left shift , Right shift, Bitwise AND , Bit wise OR, Bit wise
+        XOR
+    </h4>
+
+    <script>
+        let x = 3;
+        let y = 2;
+        let z = 1;
+        document.write(x ^= y);
+        document.write(x |= y);
+        document.write(x &= y);
+        document.write(z <<= 1);
+        document.write(z <<= 1);   
+    </script>
+
+    <h4>Comparison Operator : Equality , Stict equality , Inequality , Greater Than , Less than, greater than, Equal to
+        ,Less than or Equal to </h4>
+
+    <script>
+        let d = 3;
+        let k = 4;
+        document.write(d == k);
+        document.write(d === k);
+        document.write(d != k);
+        document.write(d !== k);
+        document.write(d > k);
+        document.write(d < k);
+        document.write(d >= k);
+        document.write(d <= k);
+    </script>
+
+    <h4>Logical Operator: Logical AND , Logical OR , Logical NOT</h4>
+
+    <script>
+        let p = 3;
+        let m = 4;
+        document.write(p && m);
+        document.write(p || m);
+        document.write(!(p || m));
+    </script>
+
+    <h4>Javascript Bitwise Operators : Bitwise AND , Bitwise OR , Bit wise XOR , Bitwise NOT , Bitwise Left Shift ,
+        Bitwise Right Shift , Zero Fill Rigth Shift</h4>
+
+    <script>
+
+        let n = 4;
+        let o = 3;
+        document.write(n & o);
+        document.write(n | o);
+        document.write(n ^ o);
+        document.write(~o);
+        document.write(n << o);
+        document.write(n >> o);
+    </script>
+
+    <h4>javascript Ternary Operators</h4>
+    <pre>
+        javascript Ternary Operator (conditional Operator) is a concise way to write a conditional (if else statement Ternary operator takes
+        Operator takes three operands i.e condition true value and false value)
+
+        Operands: 
+        Codition : Expresssion to be evaluted which returns a boolean value
+        value if true : value to be executed of the condition results in a true state 
+        value if false: value to be executed if the condition results in a false state  
+
+        characteristics of ternary operator 
+        @The Expresssion consists of three operands : the condition value if true and value if false
+        @the evalution of the condition should result in either a true/false or a boolean value
+        @the true value lies between "?" & ":" and is executed if the condition returns true similarly 
+        the false value lies after ":" and is executed if the condition returns false
+    </pre>
+    <script>
+        let j = (5 < 6) ? "True" : "false";
+        document.write(j);
+    </script>
+
+    <h4>javascript Comma Operators</h4>
+    <p>Comma operator mainly eveluates its operands from left to right sequentially nd returns the value of the
+        rightmost operand</p>
+
+    <h4>Unary Operator: typeof ,Delete </h4>
+
+    <pre>In Javascript the typeof operator returns the data type of its operands in the form of a string The operands can be any object function
+        or variable
+
+        Operand is an expression reprsenting the object or primitive whose type is to be returned the possible types exist in javascript are
+    </pre>
+
+    <h1>javascript Delete operator</h1>
+
+    <pre>
+        The mainpurpose is to remove a property from an object
+    </pre>
+
+    <pre></pre>
+
+    <script>
+        let q = 404;
+        let r = 'HappyCOding';
+        document.write(typeof q);
+        document.write(typeof r);
+
+        let emp = {
+            firstname: "raj",
+            lastname: "kiran",
+            salary: "333",
+        }
+        document.write(delete emp.salary);
+        console.log(emp);
+    </script>
+
+    <h4>Javascript Relational operators</h4>
+    <pre>Javascript Realational Operator are used to compare its operands and determine the realationship between them 
+        They return a Boolean value(true or false) based on the comparison result
+    </pre>
+
+    <h1>Javascript in operator</h1>
+    <pre>
+        Javascript in operator is an inbuilt operator which is used to check whether a particular property exists in an object or not 
+        It returns a boolean value true if the specified property is in an object otherwise it returns false
+
+        parameter
+        prop: This parameter holds the string or symbol that reprsents a property name or array index
+        object: This parameter is an object that is to be checked whether it contains the prop 
+
+        return value
+        This method returns a boolean value the value true is returned if the specified property is found in an object else it returns false
+
+        
+    </pre>
+    
+
+    <script>
+        let car = {
+            make: 'toyata',
+            madel: 'fortunar',
+            year: 2022
+        };
+
+        let hasmake = "make" in car;
+        let hascolor = 'color' in car;
+        document.write(hasmake);
+        document.write(hascolor); 
+    </script>
+
+    <h4>Javascript Bigint Operators</h4>
+    <pre>Most operator that ca be used between numbers can be used between bigint values as well</pre>
+
+    <h4>javascript String Operator </h4>
+    <pre>Concagtenation operator(+)</pre>
+
+    <script>
+        let str1 = "Hello";
+        let str2 = "Coder";
+        let result = (str1 + str2);
+        document.write(result);
+    </script>
+
+    <h1>Operator precedance in Javascript</h1>
+    <pre>Operator precedance refers to the priority given to operators while parsing a statement that has more than one operator performing operations
+        in it Operators with higher priorities are resolved first but as goes down the list the priorty decreases and hence their resolution 
+
+        The precedence of the multiple(*) and divide operator is the same but due to assiociativity from left to right the multiply operator
+        will be resolved first as it comes first when we go from left to right . 
+
+         
+    </pre>
+
+    <h1>javascript yield Operator</h1>
+    <pre>
+        Javascript yield operator is used to delegate control of a generator function to another generator function or iterable object 
+        It allows you to yield the value of an inner generator or iterable object from within an outer generator function . This operator 
+        is useful in varity of scenario such as whne working with iterator asynchronously processing data pr implementating coroutines
+
+        only the generator function it's included in call yield directly nested functions and callbacks are not permiited to invoke it
+
+        The next function() of the generator returns an iterator result object with the properties value and is done when the yield keyword is used
+        to invoke the method The generator function has not entirely finished running while done is false as seen by the value property which is the outcome
+        of evaluting the yield expression 
+
+        syntax 
+        [rv]=yield [expression] 
+
+        expression: this defines the value that the generator function will return vai the iterator protocol
+        rv : it returns the optional value that was supplied to the generator's next function so that is may carry on with its execution 
+    </pre>
+
+    
+
+    <h1>Javascript pipeline Operator</h1>
+    <pre>The javascript Pipeline operator (|>) is used to pipe the value of an expression into a function This operator makes chained functionmore redabel  </pre>
+
+
+    <h1>Javascript Grouping operator</h1>
+
+    <pre>The grouping operator consists of a pair of parentheses around an expression or sub expression to overide the normal 
+        oprator operator precedence so that expression with lower precedance can be evaluated before an expression with higher priority
+        This operator can only contains expression the parameter list is passed to a function within this operator which will treat it as an expression
+
+    </pre>
+
+    <script>
+        function group()
+        {
+            let value1=3 * (2 + 3);
+            let value2=( 3 + 2) * 3;
+            document.write(value1);
+            document.write(value2);
+        }
+        group();
+    </script>
+
+
+</body>
+
+</html>

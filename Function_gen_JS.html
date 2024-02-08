@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function Generator</h1>
+    <pre>
+        Generator Function: A generator-function is defined like a normal function. but whenever it needs to generate a value it does so
+        with the yeild keyword rsther than return. The yield statment suspends the function's execution and sends  avlue back to the caller
+    </pre>
+
+    <h1>Generator Object</h1>
+    <pre>
+        Generator function returns a generator object. Generator object are used either by calling the next method on the generator object 
+        or using the generator object in a "for of " loop 
+
+        The generator object is returned by a generating function and it conforms to both the iterable protocol and the iterator protocol
+    </pre>
+
+    <script>
+        function* fun()
+        {
+            yield 10;
+            yield 20;
+            yield 30;
+        }
+
+        let gen=fun()
+        console.log(gen.next().value);
+        console.log(gen.next().value);
+        console.log(gen.next().value);
+
+
+    </script>
+
+    <pre>
+        <b>Encountering yield and yeild*</b>
+        yield:Pauses the generator execution and returns the value of the expression which is being written after the yield keyword
+        yield*: it iterates over the operand and returns each value until done is true
+    </pre>
+
+    <script>
+        const arr=[10,20,30];
+        function* generator()
+        {
+            yield 1;
+            yield* arr;
+            yield 2;
+
+        }
+       
+
+        for(let value of generator())
+        {
+            console.log(value);
+        }
+    </script>
+</body>
+</html>
