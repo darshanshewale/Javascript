@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this keyword</h1>
+    <pre>
+        Javascript this keyword always holds the refrence to a single object which defines the current line of code's execution context 
+        which means this keyword refers to the object that is currently executing the code.
+
+        The value that this store is the current execution context of the javascript program 
+
+        Thus when used inside a function this value will change depending on how that fucntion is defined how it is invoked and the 
+        default execution context. this keyword will refer to different objects depending on how it is used 
+    </pre>
+
+    <h1>Implicit Binding</h1>
+    <pre>
+        When we call a function as a method of the object this keyword refers to the calling object 
+    </pre>
+    <script>
+        const person ={
+            name:"ram",
+            age:22,
+            greet:function()
+            {
+                return `hello ${this.name},you are ${this.age} years old`
+
+            }
+
+        }
+        console.log(person.greet());
+    </script>
+
+    <h1>Explicit Binding</h1>
+    <pre>
+        When we explicitly bind this keyword using call() , bind() or apply() method then this keyword default refrence is changed  to 
+        the object called using the above-specified method
+    </pre>
+
+    <script>
+        function ageverify()
+        {
+            if(this.age>18)
+            {
+                console.log("Yes you can drive");
+            }
+            else
+            {
+                console.log("No you cannot drive");
+            }       
+         }
+         const per1={age:21};
+         const per2={age:16};
+         ageverify.call(per1);
+         ageverify.call(per2);
+
+    </script>
+
+    <h1>Default Binding</h1>
+    <pre>this keyword is used in global scope this is set to window object</pre>
+
+    <script>
+        const age=22;
+
+        function verify(){
+            return this.age;
+        }
+        console.log(verify());
+    </script>
+
+    <pre>
+        <b>precedence order of this keyword is </b>
+        <pre>
+            Javascript blind() method
+            Javascript call() and apply method
+            Javascript object method
+            Javascript Global scope 
+        </pre>
+    </pre>
+    
+</body>
+</html>

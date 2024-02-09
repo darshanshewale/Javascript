@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>Strict Mode in Javascript</h1>
+<pre>
+    Strict Mode was a new feature in ECMAscript 5 that allows you to place a program or a function in a "strict" operating context. This strict context prevents certain
+    actions from being taken and throws more exceptions.The Statement "Use strict"; instructs the browser to use the strict mode 
+</pre>
+<pre>Benefits of using 'use strict':Strict mode makes several changes to normal javascript semantics
+    @strict mode eliminates some javascript silent error by changing them to throw errors
+    @strict mode fixes mistakes that make it difficult for javascript engines to perform optimizations:strict mode code can sometimes be made to run faster than
+    identical code that's not strict mode
+    @strict mode prohibits some syntax likely to be defined in future versions of ECMAscript
+    @It prevents or throws errors when relatively "unsafe" actions are taken (such as gaining access to the global object)
+    @it disables features that are confusing or poorly thought out 
+    @strict mode makes it easier to write "secure" Javascript.
+</pre>
+
+<h1>How to use stric mode</h1>
+<pre>
+    @used in global scope for the entire script 
+    @It can be applied to individual functions
+
+</pre>
+<!-- making it impossible to accidentally creates a global variable
+    don't allow to use a variable without declaring it 
+    Deleting a variable (or object ) and a function is not allowed -->
+
+<script>
+    'use strict';
+    x=43.4;
+
+    delete x;
+</script>
+
+<!-- Duplicating a parameter name is not allowed
+    octal numeric literals are not allowed
+    Escape characters are not allowed   -->
+
+<script>
+    'use strict';
+     function x(p1,p1){};
+</script>
+
+<script>
+    'use strict';
+    let x=010;
+</script>
+
+<script>
+    'use strict';
+
+    let x=\010;
+    
+</script>
+
+
+
+
+
+<body>
+    
+</body>
+</html>

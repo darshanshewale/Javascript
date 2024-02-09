@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Introduction to ES6</h1>
+    <pre>
+        ES6 or ESCMAscript 201 is the 6th version of the ECMAscript programming language
+    </pre>
+
+    <pre>
+        @Const
+        @let
+        @Arrow function
+        @Template literal
+        @Object and array Destructuring
+        @Defualt parameter
+        @classes
+        @Rest parameter and Spread Operator 
+        @for/of loop
+        @Maps and sets 
+        @promises
+        @symbol
+        @string method
+        @array method
+        @object entries 
+    </pre>
+    <pre>
+        Template Literal:It allows us to use the javascript variables with string without using the '+' operator .Template literaldefined using
+        (") quotes;
+    </pre>
+    <script>
+        var name="Rahul";
+        console.log('my name is ' + name);
+
+        console.log(`my  name is ${name}`);
+    </script>
+
+    <pre>
+        Destructing in javascript basically means the breaking down of a complex structure into similar parts 
+    </pre>
+
+    <script>
+        // object destructuring
+
+        const college={
+            name:'DTU',
+            est:'1941',
+            ispvt:false
+        };
+
+        let{name,est,ispvt}=college;
+        console.log(name,est,ispvt);
+
+        // Array Destructuring
+
+        const arr=['lion','tiger','dear'];
+        let [value1,value2,value3]=arr;
+
+        console.log(value1,value2,value3);
+    </script>
+
+    <pre>
+        Default paramters
+        declare a fucntion with a default parameter with a dafault value
+    </pre>
+
+    <script>
+        function fun(a,b=1)
+        {
+            return a+b;
+        }
+        console.log(fun(5,2));
+        console.log(fun(3));
+    </script>
+    
+    <pre>
+        Rest paramter and spread Operator
+        Rest parameter : it is used to reprsent a number of parameter in an array to pass them together to a function 
+        spred operator: it simply chnages array of n elements into a list of n different elements
+    </pre>
+
+    <script>
+
+        function fun(...input)
+        {
+            let sum=0;
+            for(let i of input)
+            {
+                sum+=i;
+            }
+
+            return sum;
+        }
+        console.log(fun(1,2));
+    </script>
+
+    <script>
+        let a=[1,3,4,5,-2];
+        console.log(...a);
+        console.log(Math.max(...a));
+    </script>
+</body>
+</html>
