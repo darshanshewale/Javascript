@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function fun() {
+            alert("helloCoder");
+        }
+
+
+        var a = 0;
+        var b = 0;
+        var c = 0;
+        function changeBackground() {
+            var x = document.getElementById('bg');
+            x.style.backgroundColor = 'rgb(' + a + ', ' + b + ', ' + c + ')';
+            a += 100;
+            b += a + 50;
+            c += b + 70;
+            if (a > 255) a = a - b;
+            if (b > 255) b = a;
+            if (c > 255) c = b;
+        }
+        function hov() {
+            var e = document.getElementById("hove");
+            e.style.display = 'none';
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Events</h1>
+    <pre>
+        Javascript has events to privde a dynamic interface to  a webapge.These events are hoooked to elements in the Documnet object Model
+    </pre>
+
+    <h1>Javascript Onclick Event</h1>
+    <pre>
+        This is mouse event and provokes any logic defined if the user clicks on the element it is bound to.
+
+    </pre>
+
+    <button type="button" onclick="fun()">
+        click here
+
+    </button>
+
+    <h1>Javascript onkeyup event</h1>
+    <pre>
+        this event is a keyboard event and executes instructions whenever a key is released after pressing
+    </pre>
+
+    <input id="bg" type="text" onkeyup="changeBackground()" placeholder="please enter">
+
+    <h1>Onmouse event </h1>
+    <pre>
+        This event corrsponds to hovering the mouse pointer over the element and its children to which it is bound to
+    </pre>
+
+    <div id="hove" onmouseover="hov()" style="background-color: green; height: 300px;width: 200px;">
+
+    </div>
+
+    <h1>Javascript onmouseout event </h1>
+    <pre>
+        this is oppsite to the onmouse event
+    </pre>
+ 
+    <h1>Javascript onchange event </h1>
+    <pre>
+        This event detects the change in value of any element listing to this event 
+    </pre>
+
+    <input onchange="alert(this.value)"
+    type="number"
+    style="margin-left:45%;">
+
+    <h1>Javascript onload event</h1>
+    <pre>
+        When an element is loaded completely this event is envoked
+    </pre>
+
+    <img onload="alert('Image completely loaded')" src="" alt="No image">
+
+</body>
+
+</html>

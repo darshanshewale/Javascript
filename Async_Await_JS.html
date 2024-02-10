@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Async/Await Function in Javascript</h1>
+    <pre>
+        javascript is synchronous in nature which means that it has an event loop that allows to queue up an actio that won't take place until 
+        the loop is avialble sometime after the code that queued the action has finished executing but there are a lot of functionalities in our 
+        program that make our code Asynchronous and one of them is Async/Await functionality 
+    </pre>
+
+    <h1>Async Function</h1>
+    <pre>
+        Async simple allows us to write promises-based code as if it was synchronous and it checks that we are not breaking the execution thread
+
+    </pre>
+
+    <script>
+        const getdata=async()=>{
+            let data="hello world";
+            return data;
+
+        }
+        getdata().then(data=>console.log(data));
+    </script>
+
+
+    <h1>Await Function</h1>
+    <pre>
+        Await Function is used to wait for the promise. It could be used within the async block only.It makes 
+        the code wait until the promise returns a result 
+    </pre>
+
+    <script>
+        const data=async()=>
+        {
+            let y=await "hello coders";
+           console.log(y);
+        }
+        console.log(1);
+        data();
+        console.log(2);
+    </script>
+</body>
+
+</html>
