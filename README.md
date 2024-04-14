@@ -1,6 +1,5 @@
 # Javascript 🚀🚀🚀
-JavaScript is a lightweight, interpreted programming language. It is designed for creating network-centric applications. It is complimentary to and integrated with Java. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.
-
+It is a light-weighted programming language (“scripting language”) for developing interactive web pages. It can insert dynamic text into the HTML elements. JavaScript is also known as the browser’s language.
 
 # Javascript Practices Repository 🎯
 This repository contains various Javascript practices and examples that can help beginners and intermediate learners to improve their Javascript skills and knowledge.
